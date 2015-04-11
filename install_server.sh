@@ -20,7 +20,7 @@ sudo cp src/redis-server src/redis-cli /usr/local/bin
 #echo " 5: ... logfile /var/log/redis.log"
 sudo sed -e "s/^daemonize no$/daemonize yes/" -e "s/^# bind 127.0.0.1$/bind 127.0.0.1/" -e "s/^dir \.\//dir \/var\/lib\/redis\//" -e "s/^loglevel verbose$/loglevel notice/" -e "s/^logfile stdout$/logfile \/var\/log\/redis.log/" redis.conf > /etc/redis/redis.conf
 #echo " 5. Download init Script"
-wget https://raw.github.com/gist/2777433/e64b4b8ad7d38676f7e7f70b24f3f004b4f10b74/redis-server
+sudo wget https://raw.github.com/saxenap/install-redis-amazon-linux-centos/master/redis-server
 #echo " 6. Move and Configure Redis-Server"
 sudo mv redis-server /etc/init.d
 sudo chmod 755 /etc/init.d/redis-server
