@@ -1,6 +1,6 @@
 #!/bin/bash
 #sudo yum -y update
-sudo ln -sf /usr/share/zoneinfo/America/Los_Angeles \/etc/localtime
+sudo ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 sudo yum -y install gcc gcc-c++ make 
 #echo " 2. Download, Untar and Make Redis 2.6"
 cd /usr/local/src
